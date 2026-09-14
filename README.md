@@ -3,6 +3,18 @@
 What is Proton Wineland?
 -------------------------
 
+### HLSR compatibility fork
+
+This fork keeps both Wine graphics drivers available when native Wayland is
+enabled. Set `PROTON_USE_X11_EXCLUSIVE` to an exact executable basename or a
+case-insensitive Windows path fragment to select `winex11.drv` only for that
+process. HLSR uses `PROTON_USE_X11_EXCLUSIVE=LiveSplit.exe`, so Source games
+remain on native Wayland while LiveSplit stays movable and resizable through
+XWayland in the same Wine prefix.
+
+The implementation is intentionally opt-in. With the variable unset, Proton
+Wineland behaves like its upstream release.
+
 Proton Wineland aims to solve Linux gaming problems through complete solutions
 rather than accumulating hacks and workarounds for individual games. Its goal
 is to address issues that are genuinely solvable when the necessary time and
